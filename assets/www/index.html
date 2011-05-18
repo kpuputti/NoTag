@@ -1,10 +1,59 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="utf-8" />
     <title>NoTag</title>
+
+    <link rel="stylesheet" href="lib/jquery-mobile/jquery.mobile-1.0a4.1.min.css" />
+    <link rel="stylesheet" href="css/notag.css" />
+
   </head>
   <body>
-    <h1>NoTag</h1>
+
+    <!-- HOME PAGE -->
+    <div data-role="page" id="page-home">
+      <div data-role="header">
+        <h1>NoTag home</h1>
+      </div>
+      <div data-role="content">
+        <ul data-role="listview">
+          <li><a href="#page-map">Browse map</a></li>
+          <li><a href="#page-photos">Browse photos</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- MAP PAGE -->
+    <div data-role="page" id="page-map">
+      <div data-role="header">
+        <h1>NoTag map</h1>
+      </div>
+      <div data-role="content">
+        <p>map here</p>
+      </div>
+    </div>
+
+    <!-- PHOTOS PAGE -->
+    <div data-role="page" id="page-photos">
+      <div data-role="header">
+        <h1>NoTag photos</h1>
+      </div>
+      <div data-role="content">
+        <p><a id="take-photo" data-role="button">Take a photo</a></p>
+        <ul data-role="listview" id="image-list"></ul>
+      </div>
+    </div>
+
   </body>
-  <script src="phonegap.0.9.5.js"></script>
+
+  <script src="lib/phonegap.0.9.5.js"></script>
+  <script src="lib/jquery-1.6.1.min.js"></script>
+  <script src="lib/jquery-mobile/jquery.mobile-1.0a4.1.min.js"></script>
+  <script src="js/notag.js"></script>
+  <script>
+    document.addEventListener('deviceready', function () {
+      $(notag.init);
+    }, true);
+  </script>
+
 </html>

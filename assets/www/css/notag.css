@@ -1,0 +1,6 @@
+#image-list li {
+    padding: 10px 0;
+}
+#image-list .image-date {
+    display: none;
+}
