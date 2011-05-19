@@ -1,6 +1,9 @@
 #image-list li {
     padding: 10px 0;
 }
+#image-list img {
+    margin-left: 20px;
+}
 #image-list .image-date {
     display: none;
 }

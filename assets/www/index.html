@@ -19,18 +19,14 @@
         <ul data-role="listview">
           <li><a href="#page-map">Browse map</a></li>
           <li><a href="#page-photos">Browse photos</a></li>
+          <li><a href="#page-test">Test page</a></li>
         </ul>
       </div>
     </div>
 
     <!-- MAP PAGE -->
-    <div data-role="page" id="page-map">
-      <div data-role="header">
-        <h1>NoTag map</h1>
-      </div>
-      <div data-role="content">
-        <p>map here</p>
-      </div>
+    <div data-role="page" data-fullscreen="true" id="page-map">
+      <div data-role="content" id="map"></div>
     </div>
 
     <!-- PHOTOS PAGE -->
@@ -39,8 +35,58 @@
         <h1>NoTag photos</h1>
       </div>
       <div data-role="content">
-        <p><a id="take-photo" data-role="button">Take a photo</a></p>
+        <p><button id="take-photo">Take a photo</button></p>
         <ul data-role="listview" id="image-list"></ul>
+      </div>
+    </div>
+
+    <!-- TEST PAGE -->
+    <div data-role="page" id="page-test">
+      <div data-role="header">
+        <h1>Test page</h1>
+      </div>
+      <div data-role="content">
+        <ul data-role="listview" data-inset="true">
+          <li data-role="list-divider">PhoneGap notifications</li>
+          <li><button id="test-beep">Beep</button></li>
+          <li><button id="test-vibrate">Vibrate</button></li>
+          <li><button id="test-alert">Alert</button></li>
+          <li><button id="test-confirm">Confirm</button></li>
+        </ul>
+        <ul data-role="listview" data-inset="true">
+          <li data-role="list-divider">Other PhoneGap functionality</li>
+          <li><button id="test-compass">Compass heading</button></li>
+          <li><button id="test-location">Location</button></li>
+        </ul>
+        <form>
+          <ul data-role="listview" data-inset="true">
+            <li data-role="list-divider">HTML5 form input types</li>
+            <li>Text input with placeholder<br />
+              <input type="text" placeholder="Type in text"/>
+            </li>
+            <li>Email input<br />
+              <input type="email" />
+            </li>
+            <li>URL input<br />
+              <input type="url" />
+            </li>
+            <li>Number input<br />
+              <input type="number" min="10" max="20" step="2" value="12" />
+            </li>
+            <li>Number input as a slider<br />
+              <input type="range" min="10" max="20" step="2" value="12" />
+            </li>
+            <li>Date input<br />
+              <input type="date" />
+            </li>
+            <li>Search input<br />
+              <input type="search" />
+            </li>
+            <li>Color picker<br />
+              <input type="color" />
+            </li>
+          </ul>
+        </form>
       </div>
     </div>
 
@@ -49,11 +95,13 @@
   <script src="lib/phonegap.0.9.5.js"></script>
   <script src="lib/jquery-1.6.1.min.js"></script>
   <script src="lib/jquery-mobile/jquery.mobile-1.0a4.1.min.js"></script>
+  <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
   <script src="js/notag.js"></script>
   <script>
     document.addEventListener('deviceready', function () {
       $(notag.init);
     }, true);
+    //$(notag.init);
   </script>
 
 </html>
