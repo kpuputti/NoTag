@@ -103,11 +103,17 @@ notag.test.vibrate = function (duration) {
 };
 
 notag.test.alert = function (message) {
-    navigator.notification.alert(message, function () {}, 'Custom alert title', "M'kay");
+    navigator.notification.alert(message,
+                                 function () {},
+                                 'Custom alert title',
+                                 "M'kay");
 };
 
 notag.test.confirm = function (message) {
-    navigator.notification.confirm(message, function () {}, 'Custom confirm title', "M'kay,No way!");
+    navigator.notification.confirm(message,
+                                   function () {},
+                                   'Custom confirm title',
+                                   "M'kay,No way!");
 };
 
 notag.test.compass = function () {
